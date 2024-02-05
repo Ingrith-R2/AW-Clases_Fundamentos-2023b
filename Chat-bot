@@ -1,0 +1,80 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Ingrith-R2/AW-Clases_Fundamentos-2023b/blob/main/Chat-bot\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import nltk\n",
+        "from nltk.chat.util import Chat, reflections\n",
+        "\n",
+        "reglas = {\n",
+        "    [\"Hola | Hola | Buenos días \",[\"Hola en que te puedo ayudar ?\",]],\n",
+        "    [\"Cual es el precio de (.*)\",[\"El precio es de $1\"],],\n",
+        "    [\"Cual es el horario de atención ? \",[ \"Lunes a viernes: 8 a 17\",]],\n",
+        "    [\"(.*)\",[\"Lo isento no te puedo ayudar\",]],\n",
+        "}\n",
+        "#usa red neuronal\n",
+        "#Crar chat bot\n",
+        "chat = CHat(reglas,reflections)\n",
+        "\n",
+        "#iniciar conversacion\n",
+        "entrada = input()\n",
+        "chat.respond(entrada)"
+      ],
+      "metadata": {
+        "id": "GTBbdAzQmTdN",
+        "outputId": "0db55d3a-9399-4665-91d8-1a46cc159836",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 245
+        }
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "unhashable type: 'list'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-2-2baa75395f11>\u001b[0m in \u001b[0;36m<cell line: 5>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0mnltk\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mchat\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mutil\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mChat\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mreflections\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 4\u001b[0;31m reglas = {\n\u001b[0m\u001b[1;32m      5\u001b[0m     \u001b[0;34m[\u001b[0m\u001b[0;34m\"Hola | Hola | Buenos días \"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"Hola en que te puedo ayudar ?\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m     \u001b[0;34m[\u001b[0m\u001b[0;34m\"Cual es el precio de (.*)\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"El precio es de $1\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: unhashable type: 'list'"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "s4df1ALdmTSw"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Te damos la bienvenida a Colaboratory",
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
