@@ -2,9 +2,12 @@ import nltk
 from nltk.chat.util import Chat, reflections
 
 reglas = [
-    ["Hola|Buenos días ",["Hola en que te puedo ayudar ?",]],
-    ["Cual es el precio de (.*)",["El precio es de $1"],],
-    ["Cual es el horario de atención ? ",[ "Lunes a viernes: 8 a 17",]],
+    ["Hola|Buenos días ",["Hola en que te puedo ayudar ?"]],
+    ["Quiero comprar ",["Omnilife te ofrece estos productos: -Starbien - oncemix - fluye"],],
+    ["Quiero un Strabien",["El precio de Strabien es de $8.00 dolares"],],
+    ["Quiero un ocemix",["El precio de oncemix es de $16.00 dolares"],],
+    ["Quiero un fluye",["El precio de fluye es de $28.00 dolares"],],
+    ["Cual es el su horario de atención ? ",[ "Atendemos de Lunes a viernes: 8 a 17",]],
     ["(.*)",["Lo isento no te puedo ayudar",]],
 ]
 #usa red neuronal
